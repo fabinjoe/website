@@ -1,0 +1,883 @@
+$accent1: #000000;
+$accent2: white;
+$font: 'Barlow', sans-serif;
+$stylishFont: 'Kalam', cursive;
+$accentBlue: #106CA6;
+$accentBlueDark: #002251;
+$accentBlueLight: #9AD8FF;
+$accentRedLight: #9ab3ff;
+$accentRedDark: #001b6e;
+
+body, html
+  height: auto;
+
+html
+  scroll-behavior: smooth;
+  background: #020847;
+  .none
+    display: none;
+
+  p::selection, img::selection, a::selection, h2::selection, br::selection
+    background-color: $accent1;
+    color: $accent2;
+
+  .title::selection, .content::selection, .head::selection, .more-info::selection, .text::selection, .none-sm::selection, .stylishFont::selection
+    background-color: $accent1;
+    color: $accent2;
+
+  footer p::selection, footer img::selection
+    background-color: $accent2;
+    color: $accent1;
+  
+  #qualifications .q-featured::selection
+    background-color: $accentBlueDark;
+    color: $accentBlueLight;
+
+@media only screen and (max-width: 767px) 
+  #redirect
+    font-size: 12px;
+  html
+    border: 5px solid black;
+  #blog
+    font-size: 12px;
+
+  .title
+    background: rgba(0,0,0, 0.6);
+ 
+  header 
+    .head-container
+      line-height: 9vw;
+    .header
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      font-size: 14vw;
+      .head2
+        font-size: 6vw;
+    .content p
+      font-size: 17px;
+
+  #nav
+    display: none;
+
+  #featured
+    .title
+      background: rgba(2, 52, 99, 1);
+      color: $accentBlueLight;
+    p
+      font-size: 15px;
+
+  .section
+    .title
+      background: rgba(130, 133, 131, 1.0);
+      font-size: 7vw;
+    u
+      font-size: 17px;
+    img
+      margin-top: 10px;
+
+  #projects
+    .project-head
+      font-size: 17px;
+    .p-item
+      font-size: 10px;
+
+  #qualifications
+    .q-section
+      border-bottom: 2px solid; 
+      padding-top: 10px;
+    img
+      width: 200%;
+    .head
+      font-size: 24px;
+    .col-1
+      padding: 0px;
+    p
+      padding-left: 30px;
+    a 
+      pointer-events: none; 
+
+  #skill
+    .container
+      width: 100%;
+      .percent
+        height: 10px;
+        margin: 6px 10px;
+
+  footer img
+    margin-left: 0vw;
+    padding: 0vw;
+
+  .none-sm
+    display: none;
+
+@media only screen and (min-width: 768px)
+  .none-lg
+    display: none;
+
+  #redirect
+    font-size: 17px;
+
+  header 
+    padding-bottom: 1px;
+    .head-container
+      line-height: 4.5vw;
+    .header
+      font-size: 8vw;
+    .head2
+      font-size: 4vw;
+
+  #featured
+    .title
+      background: rgba(16, 108, 166, 0.7);
+      color: $accent1;
+    p
+      font-size: 17px;
+      padding-left: 15px;
+
+  .section
+    .title
+      background: rgba(110, 110, 110, 0.7);
+      font-size: 40px;
+    .head
+      font-size: 17px;
+
+  #projects
+    .project-head
+      font-size: 27px;
+    .p-item
+      font-size: 13px;
+  
+  #qualifications
+    img
+      width: 100%;
+    .head
+      font-size: 33px;
+      margin-bottom: 10px;
+      margin-top: 20px;
+
+    .row
+      transition: transform 0.5s ease-in-out;
+    b
+      transition: text-shadow 0.3s ease-in-out;
+    .col-1
+      position: relative;
+      padding: 10px;
+      
+    .col-1:before
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: -3px;
+      width: calc(1100% + 6px);
+      height: calc(6px);
+      border-right: 0px solid black;
+      border-top: 0px solid black;
+      border-left: 0px solid black;
+      transition: border 0s ease-in-out;
+    
+    .col-1:after
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      right: calc(-1000% - 3px);
+      width: calc(1100% + 6px);
+      height: calc(6px);
+      border-right: 0px solid black;
+      border-top: 0px solid black;
+      border-left: 0px solid black;
+      transition: border 0s ease-in-out;
+
+    .row:hover
+      transform: scale(1.0);
+      .col-1, .col-10
+        animation: animateBack 0.5s forwards;
+      .col-1:before
+        border-right: 2px solid rgba(255,255,255,0.0);;
+        border-top: 2px solid rgba(255,255,255,0.0);;
+        border-left: 2px solid rgba(255,255,255,0.0);;
+        animation: animateBorder .8s forwards;
+      .col-1:after
+        border-right: 2px solid rgba(255,255,255,0.0);;
+        border-bottom: 2px solid rgba(255,255,255,0.0);;
+        border-left: 2px solid rgba(255,255,255,0.0);;
+        animation: animateBorder .8s forwards;
+      b
+        text-shadow: 0 0 5px $accentBlueLight;   
+      .q-featured:after
+        width: 100px;
+        animation: animate .8s forwards;
+        
+  #skill
+    .content
+      display: flex;
+      justify-content: center;
+
+    .container
+      width: 70%;
+      .percent
+        height: 15px;
+        margin: 3px 10px;
+
+  footer img
+    margin-left: 0vw;
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) 
+  .none-sm
+    display: none;
+  .none-lg
+    display: block;
+  
+  header
+    .header
+      font-size: 5vh;
+    .content p 
+      font-size: 3vw;
+
+$redirectLight: #dfa3ff;
+$redirectDark: #6b0500;
+$blogLight: #4ddbdb;
+$blogDark: #13abab;
+
+body
+  #redirect
+    position: relative;
+    margin-right: 25px;
+    font-family: $font;
+    font-weight: bold;
+    color: $redirectLight;
+    background-color: rgba(107, 5, 0, 0.5);
+    text-shadow: 0 0 2px $redirectLight;
+    border: 0px solid $redirectDark;
+    border-radius: 0px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    box-shadow: 0 0 10px $redirectLight;
+
+  #redirect:before 
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20%;
+    height: 50%;
+    border-top: 2px solid  darken($redirectLight, 10%);
+    border-left: 2px solid  darken($redirectLight, 10%);
+    transition: width .5s ease-in-out, height 1s ease-in-out;
+
+  #redirect:after 
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20%;
+    height: 50%;
+    border-bottom: 2px solid  darken($redirectLight, 10%);
+    border-right: 2px solid  darken($redirectLight, 10%);
+    transition: width .5s ease-in-out, height 1s ease-in-out;
+
+  #redirect:hover, #redirect:focus
+    animation: animateRedirect .5s forwards;
+
+  #redirect:hover:before, #redirect:focus:before
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+  #redirect:hover:after, #redirect:focus:after
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+  #blog
+    position: relative;
+    margin-right: 25px;
+    font-family: $font;
+    font-weight: bold;
+    color: $blogLight;
+    background-color: rgba(34, 150, 2, 0.5);
+    text-shadow: 0 0 2px $blogLight;
+    border: 0px solid $blogDark;
+    border-radius: 0px;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    box-shadow: 0 0 10px #5fff57;
+
+  #blog:before 
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 20%;
+    height: 50%;
+    border-top: 2px solid  darken($blogLight, 10%);
+    border-left: 2px solid  darken($blogLight, 10%);
+    transition: width .5s ease-in-out, height 1s ease-in-out;
+
+  #blog:after 
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 20%;
+    height: 50%;
+    border-bottom: 2px solid  darken($blogLight, 10%);
+    border-right: 2px solid  darken($blogLight, 10%);
+    transition: width .5s ease-in-out, height 1s ease-in-out;
+
+  #blog:hover, #blog:focus
+    animation: animateBlog .5s forwards;
+
+  #blog:hover:before, #blog:focus:before
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+  #blog:hover:after, #blog:focus:after
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+
+header
+  background: url(background/parallax.png);
+  background-size: 100% auto;
+  background-attachment: fixed;
+  height: auto;
+  margin-bottom: 0px;
+  padding: 0px;
+   
+  .header
+    margin-left: 5%;
+    margin-right: 5%;
+    height: auto;
+    
+  .head-container
+    text-align: center;
+    padding: 10px;
+    padding-top: .55em;
+    padding-bottom: .2em;
+
+    .head
+      color: $accent2;
+      padding-bottom: 0.5vw;
+      /*text-shadow: -2px -2px 0px whit;
+      /*background-color: rgba(255,255,255,.9);
+      font-family: $stylishFont;
+      font-weight: bolder;
+      text-align: center;    
+
+    .head2
+      position: relative;
+      height: 0px;
+      padding-bottom: 100px;
+      overflow: hidden;
+      /*animation: loadAnimation 1s;
+    
+    .head2:after
+      content:
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6vw;
+      background: white;
+
+  .content
+    background: rgba(184, 184, 184, 0.7);
+    padding-top: 1.3vw;
+    padding-bottom: 1.3vw;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: auto;
+    font-family: $font;
+    font-size: 1.8vw;
+    font-weight: bolder;
+    margin-top: 20px;
+  
+    p
+      margin-bottom: 0px;
+
+    .float-right
+      float: right;
+    
+#mobileHeader
+  display: none;
+
+//18vw is for 5 nav items
+#nav 
+  background-color: $accent1;
+  color: $accent1;
+
+  .navbar-nav
+    width: 100%;
+
+  .nav-link
+    font-weight: bold;
+
+  .nav-item
+    background-color: gray;
+    margin-right: 1%;
+    width: 22.5vw;
+    text-align: center;
+    font-size: 1.5vw; 
+
+  #linkf
+    width: 4vw;
+    background-color: $accentBlueDark;
+    color: $accentBlueLight;
+  
+  #link0
+    padding-left: 0px;
+    padding-top: 10px;
+    padding: 0px;
+    font-size: 2.4vw;
+    height: 100%;
+    vertical-align: center;
+    background-color: $accentBlue;
+    color: $accentBlueLight;
+
+  #link0:hover
+    background-color: $accentBlueDark;
+    color: darken($accentBlueLight, 5%);
+
+  #link0::selection
+    background-color: $accentBlueDark;
+
+  #link1:hover, #link2:hover, #link3:hover, #link4:hover, #link5:hover
+    background-color: #595958;
+    color: #bababa;
+  
+.division1
+  background: url(background/parallax.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 15px;
+
+.division2
+  height: 10px;
+  width: 100%;
+  background-color: black;
+
+#featured
+  background: url(background/lightblue.jpg);
+  background-size: cover; 
+  padding-bottom: 10px;
+  .head
+    padding-top: 0px;
+    font-family: $font;
+    font-weight: bold;  
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  p
+    font-family: $font;
+  .title::selection, .head::selection, p::selection, a::selection, u::selection, img::selection, span::selection
+    background-color: $accentBlueDark;
+    color: $accentBlueLight;
+  a:hover
+    color: $accentBlueDark;
+  img 
+    box-shadow: 0 0 10px $accentBlueDark;
+
+.section
+  font-family: $font;
+  background: url(background/gray3.jpg);
+  background-size: 100% auto;
+
+  .title
+    font-family: $font;
+    font-weight: bolder;
+    padding-left: 5%;
+    padding-right: 5%;
+  .content
+    width: 100%;
+    padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+  a
+    font-weight: bold;
+    color: $accent1;
+  a:hover
+    color: lighten($accent1, 40%);
+  a::selection
+    color: $accent2;
+    background-color: $accent1;
+
+$accentBlueLight: #82C6F6;
+#projects
+  .project-item
+    margin: 10px;
+    border-bottom: 2px dashed black;
+    padding-bottom: 4px;
+  .project-head
+    font-weight: bolder;
+  .p-item
+    margin-right: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;  
+    border-radius: 10px;
+    border: 2px solid;
+    font-weight: bold;
+  .b
+    background-color: $accentBlueLight;
+    border-color: $accentBlueDark;
+    color: $accentBlueDark;
+  .r
+    background-color: $accentRedLight;
+    border-color: $accentRedDark;
+    color: $accentRedDark;
+  
+  .project-head::selection, .project-description::selection
+    background-color: $accent1;
+    color: $accent2;
+  
+  .project-languages::selection, .p-item::selection
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  
+  .b:hover
+    background-color: $accentBlueDark;
+    color: $accentBlueLight;
+  .r:hover
+    background-color: $accentRedDark;
+    color: $accentRedLight;
+
+$accentBlueLight: #9AD8FF;
+#skill
+  padding-bottom: 15px;
+  p
+    font-size: 18px;
+    line-height: 30px;
+    padding: 10px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+  .bottom-text
+    padding: 20px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 0px;
+    margin-top: 0px;
+
+  .content
+    padding-top: 10px;
+    padding-bottom: 5px;
+    width: 100%;
+
+  .container
+    font-weight: bold;
+
+    .skills
+      width: 100%;
+      position: relative;
+      display: flex;
+      margin: 18px 0;
+      padding: 9px 16px 9px;
+      background: $accent1;
+      border-radius: 5px;
+      overflow: hidden;
+      border: 0px solid #000;
+      transition: 0.5s;
+
+      .name
+        position: relative;
+        width: 110px;
+        text-align: right;
+        color: white;
+        margin-top: -2px;
+        text-transform: uppercase;
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none;
+        transition: color .3s ease-out;
+
+
+      .percent
+        position: relative;
+        width: calc(100% - 110px);
+        border-radius: 10px;
+        background: lighten(#1f1f1f, 5%);
+        box-shadow: 0 0 10px #000;
+        overflow: hidden;
+
+        .progress
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: linear-gradient(-45deg, darken($accentBlueLight, 5%), lighten($accentBlueDark, 15%));
+          border-radius: 10px;
+          border-shadow: inset 0 0 2px #000;
+          animation: animate 2s ease-in-out forwards;
+          z-index: 3; 
+        
+        .progress:before
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          background: rgba(255,255,255,0.3);
+          border-radius: 10px;
+          z-index: 6;
+
+    .skills:hover
+      transform: scale(1.0);
+      box-shadow: 0 0 8px $accentBlue;
+      .progress:before
+        content: '';
+        animation: animateBefore .3s ease-out forwards;
+        background: rgba(255,255,255,0.3);
+        border-radius: 10px;
+        z-index: 6;
+      .name
+        color: $accentBlueLight;
+      .skills:before
+        filter: blur(10px);
+
+    .skills:before
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(255,255,255,0.1);
+      z-index: 10;
+  
+#qualifications
+  p
+    margin-bottom: 0px;
+    padding-top: 8px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+  .head
+    font-family: $font;
+    font-weight: bold;
+    color: lighten($accentBlueDark, 3%);
+    text-decoration: underline;
+    text-decoration-color: $accent1;
+  b::selection, i::selection, br::selection
+    background-color: $accent1;
+    color: $accent2;
+  .row
+    padding-left: 30px;
+    margin-bottom: 10px;
+  .q-section
+    border-bottom: 2px dashed;
+    padding-bottom: 5px;
+  .q-featured:hover
+    text-decoration: none;
+
+  .q-featured
+    position: relative;
+    top: 0;
+    font-size: 13px;
+    margin-left: 10px;
+    height: 1px;
+    align-items: center;
+    padding-right: 1.5px;
+    padding-left: 1.5px;
+    background: $accentBlueDark;
+    color: $accentBlueLight;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+  
+  .q-featured:after
+    content: 'FEATURED';
+    position: absolute;
+    color: $accentBlueDark;
+    padding-left: 5px;
+    top: 0;
+    transform: translate(0, -10%);
+    width: 0px;
+    overflow: hidden;
+
+#me
+  min-height: 370px;
+  .content  
+    .imgBox
+      position: relative;
+      float: right;
+      margin-top: 5px;
+      margin-left: 20px;
+      width: 200px;
+      height: 240px;
+      background: darken($accentBlueDark, 5%);
+
+      img
+        border: 6px solid darken($accentBlueDark, 5%);
+        border-radius: 0px;
+        margin-top: 0px;
+        max-width: 100%;
+        filter: opacity(0.9);
+        transition: filter 0.3s ease-in-out;
+    
+    .imgBox:hover
+      img
+        filter: opacity(1);
+        animation-delay: 0.3s;
+        animation: animateMe 0.4s alternate infinite;
+    .imgBox:hover + .text
+      .stylishFont
+        text-shadow: 0 0 2px $accentBlue;
+        color: $accentBlueDark;
+        
+    .text 
+      font-size: 20px;
+      line-height: 33px;
+      .stylishFont
+        font-size: 20px;
+        line-height: 33px;
+        font-family: 'Kalam', cursive;
+        text-shadow: 0 0 1px black;
+        transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+
+footer
+  background-color: $accent1;
+  color: $accent2;
+  padding: 5%;
+  font-family: $font;
+  padding-top: 10px;
+  font-weight: bolder;
+  text-align: center;
+  
+  .contact-head
+    font-size: 3vw;
+  div.contact-items
+    padding-right: 0;
+  .col-4
+    text-align: center;
+  a
+    pointer-events: none;
+
+  .nav-link:after
+    position: absolute;
+    font-size: 22px;
+    color: #c7c7c7;
+    display: block;
+    left: 50%;
+    bottom: -10px;
+    height: 0px;
+    overflow: hidden;
+
+  #contact-mail:after
+    content: 'Email';
+    transform: translate(-1.1em, 0)
+  #contact-linkedin:after
+    content: 'LinkedIN';
+    transform: translate(-1.9em, 0)
+  #contact-github:after
+    content: 'GitHub';
+    transform: translate(-1.5em, 0)
+
+  .nav-link:hover:after
+    height: 30px;
+    animation: 0.3s animateSocialIcons forwards ease-out;
+
+  img
+    color: $accent2;
+    background-color: $accent2;
+    width: 50px;
+    height: 50px;
+    transition: .3s ease-in-out;
+    outline: 0px;
+    border: 4px solid $accent2;
+    border-radius: 4px;
+    pointer-events: auto;
+
+  img:hover
+    filter: invert(1);
+    transform: scale(1.7);
+    a
+      pointer-events: auto;
+
+  #contact-mail
+    img:hover
+      transform: scale(1.4);
+
+@keyframes loadAnimation
+  to 
+    width: 0;
+
+@keyframes animate
+  from 
+    width: 0;
+
+@keyframes animateBefore
+  from 
+    width: 0%;
+  to
+    width: 100%;
+
+@keyframes animateBack
+  from 
+    background: rgba(255,255,255,0.0);
+  to
+    background: rgba(255,255,255,0.5);
+  
+@keyframes animateBorder
+  from
+    border-color: rgba(255,255,255,0.0);
+  to
+    border-color: black;
+
+
+@keyframes animateRedirect
+  from 
+    background: rgba(107, 5, 0,0.5);
+    color: $redirectLight;
+    box-shadow: 0 0 10px $redirectLight;
+  to
+    background: rgba(107, 5, 0,1.0);
+    color: lighten($redirectLight, 5%);
+    box-shadow: 0 0 20px $redirectLight;
+
+@keyframes animateBlog
+  from 
+    background: rgba(20, 92, 0,0.5);
+    color: $blogLight;
+    box-shadow: 0 0 10px #5fff57;
+  to
+    background: rgba(20, 92, 0,1.0);
+    color: lighten($blogLight, 5%);
+    box-shadow: 0 0 20px #5fff57;
+
+@keyframes animateMe
+  from
+    box-shadow: 0 0 0 2px rgba(16, 108, 166, 0.0);
+  to 
+    box-shadow: 0 0 0 5px rgba(16, 108, 166, 0.5);
+
+
+@keyframes animateSocialIcons
+  from 
+    height: 0;
+
+@media only screen and (max-width: 767px)
+  .section
+    .title
+      text-align: center;
+  #me
+    .content
+      display: grid;
+      text-align: center;
+      justify-items: center;
+      align-content: center;
+    .imgBox
+      align-content: 100px;

@@ -1,0 +1,39 @@
+*{
+    font-family: 'Barlow', sans-serif;
+}
+
+html, body{
+    min-height: 100%;
+    max-width: 100%;
+}
+
+#redirect, #blog, .custom-control-label, #nav{
+    display:none;
+} 
+
+
+.title{
+    display: none;
+}
+
+#mobileHeader{
+    background: url(background/parallax.png);
+    background-size: 100% auto;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.head-container{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-shadow: 0 0 10px yellow;
+}
+
+#featured{
+    background: url(proBackground/gold.jpg);
+    background-size: cover;  
+}
